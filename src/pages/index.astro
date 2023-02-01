@@ -13,36 +13,182 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 	<body>
 		<Header title={SITE_TITLE} />
 		<main>
-			<h2>¡Hola a todos! bienvenidos a mi blog</h2>
-			<p>
-				Mi nombre es <strong id="name">Andrés</strong> y me dedico al
-				<strong>desarrollo web</strong>, especialmente en el ámbito del <strong
-					>frontend</strong
-				>. Me apasiona construir aplicaciones <strong>atractivas</strong
-				> y <strong>fáciles de usar</strong> para las personas. Soy originario
-				de <strong>Colombia</strong> y tengo un gran interés en la <strong
-					>tecnología</strong
-				>, especialmente en el ámbito de la <strong
-					>descentralización</strong
-				> y las <strong>criptomonedas</strong>.
-			</p>
+			<style>
+				.container {
+					max-width: 800px;
+					margin: 0 auto;
+					padding: 20px;
+				}
+				.header {
+					text-align: center;
+					font-size: 36px;
+					font-weight: bold;
+					margin-bottom: 20px;
+				}
+				.subheader {
+					text-align: center;
+					font-size: 18px;
+					margin-bottom: 40px;
+				}
+				.section {
+					margin-bottom: 40px;
+				}
+				.section-title {
+					font-size: 24px;
+					font-weight: bold;
+					margin-bottom: 20px;
+				}
 
-			<p>
-				En mi blog, encontrarás contenido relacionado con el <strong
-					>desarrollo de software</strong
-				> y <strong>tecnología en general</strong>. Compartiré mis
-				pensamientos e ideas sobre <strong>criptomonedas</strong> y <strong
-					>descentralización</strong
-				>. Mi objetivo es compartir lo que sé y lo que he aprendido con
-				otros interesados en estos temas de una forma amigable y
-				relajada.
-			</p>
+				.experience-container {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+				}
 
-			<p>
-				Echa un vistazo a mi blog y siéntete libre de dejar tus
-				comentarios. Estoy emocionado de compartir mi contenido contigo.
-				¡Nos vemos por aquí!
-			</p>
+				.experience-item {
+					width: 100%;
+					padding: 20px;
+					text-align: left;
+					background-color: #f2f2f2;
+					border-radius: 10px;
+					box-shadow: 0px 0px 10px #ccc;
+				}
+
+				.job-title {
+					font-size: 20px;
+					margin-top: 0px;
+					margin-bottom: 10px;
+				}
+
+				.company-name {
+					font-size: 18px;
+					margin-top: 0px;
+					margin-bottom: 10px;
+					color: #999;
+				}
+
+				.job-dates {
+					font-size: 14px;
+					margin-top: 0;
+					margin-bottom: 10px;
+					color: #bbb;
+				}
+
+				.job-description {
+					font-size: 16px;
+				}
+				.skill-category {
+					display: flex;
+					flex-wrap: wrap;
+
+					align-items: center;
+					height: 100%;
+				}
+				.skill-category-title {
+					font-weight: bold;
+					text-align: center;
+					margin-bottom: 12px;
+					display: flex;
+					width: 100%;
+				}
+				.skill-bubble {
+					background-color: lightgray;
+					color: black;
+					padding: 10px;
+					margin: 3px;
+					border-radius: 50px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					min-width: fit-content;
+					height: 10px;
+					animation: bubble-in 1s ease-out forwards;
+				}
+
+				@keyframes bubble-in {
+					from {
+						transform: scale(0);
+					}
+					to {
+						transform: scale(1);
+					}
+				}
+			</style>
+			<div class="container">
+				<div class="header">Andrés Marrugo</div>
+				<div class="subheader">Frontend Developer</div>
+				<div class="section">
+					<div class="section-title">Resume</div>
+					<p>
+						Over the last 3 years, I've been working as a web
+						developer. I've been using React and some of its
+						essential libraries, like React Router, Redux, React
+						Query, Axios, Material UI, Ant Design, TypeScript, and
+						React Hook Forms. My daily workflow involves using Git
+						for version control and work in team. I'm also
+						experienced with Docker and popular cloud services like
+						Azure, AWS, and Google Cloud. I've had the opportunity
+						to work on several projects for different clients, using
+						the Scrum methodology and issue tracking tools such as
+						Jira and Trello. I'm confident in my ability to bring
+						success to any project I work on, and I'm always eager
+						to learn and grow as a developer.
+					</p>
+				</div>
+				<div class="section">
+					<div class="section-title">Skills</div>
+					<div class="skill-category">
+						<div class="skill-category-title">
+							React and its Ecosystem
+						</div>
+						<div class="skill-bubble">React</div>
+						<div class="skill-bubble">React Router</div>
+						<div class="skill-bubble">Redux</div>
+						<div class="skill-bubble">React Query</div>
+						<div class="skill-bubble">Axios</div>
+						<div class="skill-bubble">Material UI</div>
+						<div class="skill-bubble">Ant Design</div>
+						<div class="skill-bubble">TypeScript</div>
+						<div class="skill-bubble">React Hook Forms</div>
+					</div>
+					<div class="skill-category">
+						<div class="skill-category-title">
+							Tools and Technologies
+						</div>
+						<div class="skill-bubble">Git</div>
+						<div class="skill-bubble">Jira</div>
+						<div class="skill-bubble">Trello</div>
+						<div class="skill-bubble">Docker</div>
+						<div class="skill-bubble">Azure</div>
+						<div class="skill-bubble">AWS</div>
+						<div class="skill-bubble">Google Cloud</div>
+					</div>
+				</div>
+				<div class="section">
+					<h2 class="section-title">Experience</h2>
+					<div class="experience-container">
+						<div class="experience-item">
+							<h3 class="job-title">Fronted Developer</h3>
+							<h4 class="company-name">Lean Tech</h4>
+							<p class="job-dates">
+								November 2019 - September 2022
+							</p>
+							<p class="job-description">
+								During my time at Lean Tech, I had the
+								opportunity to work on the implementation of
+								various software products for international
+								clients in the freight transportation industry
+								in the USA. As a frontend developer, I played a
+								crucial role in ensuring the successful delivery
+								of these projects. Collaborating closely with
+								the team, I worked towards a common goal of
+								delivering high-quality software solutions that
+								met the needs and expectations of our clients.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</main>
 		<Footer />
 	</body>
