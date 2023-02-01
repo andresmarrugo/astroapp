@@ -2,6 +2,7 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { GitHub, Twitter, Linkedin } from "astro-feather-icons";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 ---
 
@@ -12,114 +13,42 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 	</head>
 	<body>
 		<Header title={SITE_TITLE} />
-		<main>
-			<style>
-				.container {
-					max-width: 800px;
-					margin: 0 auto;
-					padding: 20px;
-				}
-				.header {
-					text-align: center;
-					font-size: 36px;
-					font-weight: bold;
-					margin-bottom: 20px;
-				}
-				.subheader {
-					text-align: center;
-					font-size: 18px;
-					margin-bottom: 40px;
-				}
-				.section {
-					margin-bottom: 40px;
-				}
-				.section-title {
-					font-size: 24px;
-					font-weight: bold;
-					margin-bottom: 20px;
-				}
-
-				.experience-container {
-					display: flex;
-					flex-wrap: wrap;
-					justify-content: center;
-				}
-
-				.experience-item {
-					width: 100%;
-					padding: 20px;
-					text-align: left;
-					background-color: #f2f2f2;
-					border-radius: 10px;
-					box-shadow: 0px 0px 10px #ccc;
-				}
-
-				.job-title {
-					font-size: 20px;
-					margin-top: 0px;
-					margin-bottom: 10px;
-				}
-
-				.company-name {
-					font-size: 18px;
-					margin-top: 0px;
-					margin-bottom: 10px;
-					color: #999;
-				}
-
-				.job-dates {
-					font-size: 14px;
-					margin-top: 0;
-					margin-bottom: 10px;
-					color: #bbb;
-				}
-
-				.job-description {
-					font-size: 16px;
-				}
-				.skill-category {
-					display: flex;
-					flex-wrap: wrap;
-
-					align-items: center;
-					height: 100%;
-				}
-				.skill-category-title {
-					font-weight: bold;
-					text-align: center;
-					margin-bottom: 12px;
-					display: flex;
-					width: 100%;
-				}
-				.skill-bubble {
-					background-color: lightgray;
-					color: black;
-					padding: 10px;
-					margin: 3px;
-					border-radius: 50px;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					min-width: fit-content;
-					height: 10px;
-					animation: bubble-in 1s ease-out forwards;
-				}
-
-				@keyframes bubble-in {
-					from {
-						transform: scale(0);
-					}
-					to {
-						transform: scale(1);
-					}
-				}
-			</style>
-			<div class="container">
-				<div class="header">Andrés Marrugo</div>
-				<div class="subheader">Frontend Developer</div>
-				<div class="section">
-					<div class="section-title">Resume</div>
-					<p>
+		<main class="bg-white-100 p-4">
+			<div class="container mx-auto">
+				<div class="text-3xl font-bold mb-2 text-center">
+					Andrés Marrugo
+				</div>
+				<div class="text-xl font-medium mb-6 text-center">
+					Frontend Developer
+				</div>
+				<div
+					class="bg-slate-50 py-2 mb-5 flex justify-center space-x-3"
+				>
+					<a href="https://github.com/andresmarrugo" target="_blank">
+						<GitHub
+							class="text-gray-700 hover:text-purple-700"
+							size={16}
+						/>
+					</a>
+					<a href="https://twitter.com/andiesmarrugo" target="_blank">
+						<Twitter
+							class="text-gray-700 hover:text-purple-700"
+							size={16}
+						/>
+					</a>
+					<a
+						href="https://www.linkedin.com/in/andresmarrugo/"
+						target="_blank"
+					>
+						<Linkedin
+							class="text-gray-700 hover:text-purple-700"
+							size={16}
+						/>
+					</a>
+				</div>
+				<div class="mb-12">
+					<h2 class="text-xl font-bold mb-2">Resume</h2>
+					<p class="text-gray-700">
 						Over the last 3 years, I've been working as a web
 						developer. I've been using React and some of its
 						essential libraries, like React Router, Redux, React
@@ -135,61 +64,100 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 						to learn and grow as a developer.
 					</p>
 				</div>
-				<div class="section">
-					<div class="section-title">Skills</div>
-					<div class="skill-category">
-						<div class="skill-category-title">
+				<div class="mb-5">
+					<h2 class="text-xl font-bold mb-2">Skills</h2>
+					<div class="mb-3">
+						<h3 class="text-lg font-medium mb-2">
 							React and its Ecosystem
+						</h3>
+						<div class="flex flex-wrap mb-2">
+							<div class="p-2 mr-2 mb-2 bg-gray-200 rounded-full">
+								React
+							</div>
+							<div class="p-2 mr-2 mb-2 bg-gray-200 rounded-full">
+								React Router
+							</div>
+							<div class="p-2 mr-2 mb-2 bg-gray-200 rounded-full">
+								Redux
+							</div>
+							<div class="p-2 mr-2 mb-2 bg-gray-200 rounded-full">
+								React Query
+							</div>
+							<div class="p-2 mr-2 mb-2 bg-gray-200 rounded-full">
+								Axios
+							</div>
+							<div class="p-2 mr-2 mb-2 bg-gray-200 rounded-full">
+								Material UI
+							</div>
+							<div class="p-2 mr-2 mb-2 bg-gray-200 rounded-full">
+								Ant Design
+							</div>
+							<div class="p-2 mr-2 mb-2 bg-gray-200 rounded-full">
+								TypeScript
+							</div>
+							<div class="p-2 mr-2 mb-2 bg-gray-200 rounded-full">
+								React Hook Forms
+							</div>
 						</div>
-						<div class="skill-bubble">React</div>
-						<div class="skill-bubble">React Router</div>
-						<div class="skill-bubble">Redux</div>
-						<div class="skill-bubble">React Query</div>
-						<div class="skill-bubble">Axios</div>
-						<div class="skill-bubble">Material UI</div>
-						<div class="skill-bubble">Ant Design</div>
-						<div class="skill-bubble">TypeScript</div>
-						<div class="skill-bubble">React Hook Forms</div>
-					</div>
-					<div class="skill-category">
-						<div class="skill-category-title">
-							Tools and Technologies
-						</div>
-						<div class="skill-bubble">Git</div>
-						<div class="skill-bubble">Jira</div>
-						<div class="skill-bubble">Trello</div>
-						<div class="skill-bubble">Docker</div>
-						<div class="skill-bubble">Azure</div>
-						<div class="skill-bubble">AWS</div>
-						<div class="skill-bubble">Google Cloud</div>
 					</div>
 				</div>
-				<div class="section">
-					<h2 class="section-title">Experience</h2>
-					<div class="experience-container">
-						<div class="experience-item">
-							<h3 class="job-title">Fronted Developer</h3>
-							<h4 class="company-name">Lean Tech</h4>
-							<p class="job-dates">
-								November 2019 - September 2022
-							</p>
-							<p class="job-description">
-								During my time at Lean Tech, I had the
-								opportunity to work on the implementation of
-								various software products for international
-								clients in the freight transportation industry
-								in the USA. As a frontend developer, I played a
-								crucial role in ensuring the successful delivery
-								of these projects. Collaborating closely with
-								the team, I worked towards a common goal of
-								delivering high-quality software solutions that
-								met the needs and expectations of our clients.
-							</p>
+				<div class="mb-5">
+					<h3 class="text-lg font-medium mb-2">
+						Tools and Technologies
+					</h3>
+					<div class="flex flex-wrap mb-2">
+						<div class="p-2 mr-2 mb-2 bg-gray-200 rounded-full">
+							Git
+						</div>
+						<div class="p-2 mr-2 mb-2 bg-gray-200 rounded-full">
+							Jira
+						</div>
+						<div class="p-2 mr-2 mb-2 bg-gray-200 rounded-full">
+							Trello
+						</div>
+						<div class="p-2 mr-2 mb-2 bg-gray-200 rounded-full">
+							Docker
+						</div>
+						<div class="p-2 mr-2 mb-2 bg-gray-200 rounded-full">
+							Azure
+						</div>
+						<div class="p-2 mr-2 mb-2 bg-gray-200 rounded-full">
+							AWS
+						</div>
+						<div class="p-2 mr-2 mb-2 bg-gray-200 rounded-full">
+							Google Cloud
 						</div>
 					</div>
 				</div>
 			</div>
+
+			<div>
+				<h2 class="font-bold mb-2 text-xl">Experience</h2>
+				<div class="flex flex-col bg-slate-200 rounded-lg p-6 pt-5">
+					<h3 class="text- font-semibold text-pastel-500 pb-1">
+						Frontend Developer
+					</h3>
+					<h4 class="text-sm font-medium text-pastel-400 pb-1">
+						Lean Tech
+					</h4>
+					<p class="text-sm text-slate-600 pb-3">
+						November 2019 - September 2022
+					</p>
+					<p class="text-sm text-pastel-400">
+						During my time at Lean Tech, I had the opportunity to
+						work on the implementation of various software products
+						for international clients in the freight transportation
+						industry in the USA. As a frontend developer, I played a
+						crucial role in ensuring the successful delivery of
+						these projects. Collaborating closely with the team, I
+						worked towards a common goal of delivering high-quality
+						software solutions that met the needs and expectations
+						of our clients.
+					</p>
+				</div>
+			</div>
 		</main>
+
 		<Footer />
 	</body>
 </html>

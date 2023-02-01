@@ -1,6 +1,6 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../config';
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../config";
 ---
 
 <header>
@@ -8,11 +8,9 @@ import { SITE_TITLE } from '../config';
 		{SITE_TITLE}
 	</h2>
 	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
+		<HeaderLink href="/">Profile</HeaderLink>
 		<HeaderLink href="/blog">Blog</HeaderLink>
 		<HeaderLink href="/about">About</HeaderLink>
-		<HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">Twitter</HeaderLink>
-		<HeaderLink href="https://github.com/withastro/astro" target="_blank">GitHub</HeaderLink>
 	</nav>
 </header>
 <style>
